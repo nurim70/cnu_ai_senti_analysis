@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 # - Python에서 () 붙어 있으면 대부분 함수
 # - 예: print(), pprint(), get(), get_text()
 # - 내장 함수: 파이썬 설치하면 기본적으로 제공해주는 함수
-# - 외부 함수: 다른 개발자가 만들어 놓은거 inport해서 사용, 예: requests.get(), BeautifulSoup()
+# - 외부 함수: 다른 개발자가 만들어 놓은거 import해서 사용, 예: requests.get(), BeautifulSoup()
 # - 사용자 정의 함수: 직접 만들어서 사용하는 함수
 
 
@@ -32,7 +32,7 @@ def get_daum_news(url):  # 개발자 규칙, 함수 만들기 전에는 2줄을 
 
 
     # if문 -> 제어문(조건이 True인 경우에만 실행)
-    # != 같지 않다
+    # != : 같지 않다
     if len(contents) != 0:  # 본문이 있는 경우에만
         content = ''
         for line in contents:

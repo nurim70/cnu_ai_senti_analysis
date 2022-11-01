@@ -47,7 +47,7 @@ doc = BeautifulSoup(result.text, 'html.parser')
 title = doc.select('h3.tit_view')[0].get_text()  # h3태그 중에 이름이 tit_view를 갖는 select, 2칸 띄고 주석 다는게 규칙이다 파이썬에서는 코딩 컨벤션이라고 한다.
 
 
-# html -> tage + 선택자
+# html -> tag + 선택자
 #  - tag: 기본적으로 정의 돼있음(h3, p, div, span, ...)
 contents = doc.select('section p')  # section 태그를 부모로 둔 모든 자식 p태그들 select
 

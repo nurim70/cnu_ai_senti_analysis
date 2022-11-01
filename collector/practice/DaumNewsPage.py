@@ -15,7 +15,7 @@ from collector.practice.CollectorService import get_daum_news
 # → range(1, 3, 1) = [1, 2]
 # → range(1, 10, 2) = [1, 3, 5, 7, 9]
 news_count = 0
-for num in range(1, ):
+for num in range(1, 3):
     print(f'■ {num}page ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■')
     url = f'https://news.daum.net/breakingnews/digital?page={num}'  # 1page
     result = requests.get(url)
