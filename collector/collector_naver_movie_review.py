@@ -2,6 +2,7 @@ import math
 import re
 import requests
 from bs4 import BeautifulSoup
+from db.database import create_review
 
 #####################
 # 1. 영화 제목 수집 #
@@ -87,4 +88,23 @@ def movie_review_crawler(movie_code):
             print(f'# Score: {score}')
             print(f'# Date: {date}')
             print(f'# Writer: {writer}')
-
+            # Review 데이터 생성
+            # → 규격(포멧) → JSON
+            # JSON → 데이터 주고받을 때 많이 사용하는 타입
+            # MongoDB → BSON(Binary JSON) = JSON
+            # Python의 Dictionary = JSON
+            #
+            # ※ Python Dictionary = JSON = BSON
+            # JSON 포멧
+            # {Key:value, Key:value, Key:value}
+            
+            # dict type은 데이터 꺼낼때 key값
+            # List type은 데이터 꺼낼때 index값
+            data = {
+                'title': title,
+                'score': score,
+                'review': review,
+                'writer': writer,
+                'date': date
+            }
+            create_review(data)
